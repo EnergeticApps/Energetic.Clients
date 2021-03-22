@@ -12,9 +12,9 @@ namespace Energetic.Clients.Cookies
 
         ValueTask<bool> ContainsKeyAsync(string key);
 
-        ValueTask<string> GetItemAsStringAsync(string key);
+        ValueTask<string?> GetItemAsStringAsync(string key);
 
-        ValueTask<T> GetItemAsync<T>(string key);
+        ValueTask<T?> GetItemAsync<T>(string key);
 
         ValueTask RemoveItemAsync(string key);
 

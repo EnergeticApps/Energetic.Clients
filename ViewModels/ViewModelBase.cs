@@ -51,7 +51,7 @@ namespace Energetic.Clients.ViewModels
                 //await CommandFactory.DisposeAsync();
             }
 
-            CommandFactory = null;
+            CommandFactory = null!; //TODO: is this the right way to do it? We're setting a non-nullable thing to a null reference.
             await Task.CompletedTask;
         }
 
