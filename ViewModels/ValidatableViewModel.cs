@@ -64,9 +64,11 @@ namespace Energetic.Clients.ViewModels
             IEnumerable<string>? latestErrorMessagesForProperty,
             string propertyName)
         {
-            var previousErrorMessagesForProperty = _errors[propertyName];
+            IEnumerable<string> previousErrorMessagesForProperty = _errors.ContainsKey(propertyName) ? 
+                _errors[propertyName] :
+                new List<string>();
 
-            if (latestErrorMessagesForProperty.IsNotNullOrEmpty())
+            if (latestErrorMessagesForProperty.IsNullOrEmpty())
             {
                 if (_errors.Remove(propertyName))
                 {
