@@ -21,14 +21,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Remove="ClientStartupBase.cs" />
+		<None Include="icon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\icon.png">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
+		<Content Include="README.md" Pack="True" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>
