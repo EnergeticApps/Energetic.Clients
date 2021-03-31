@@ -1,5 +1,4 @@
-﻿using Energetic.Clients.Navigation;
-using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+﻿using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.Extensions.Options;
 using System;
 using System.Threading.Tasks;
