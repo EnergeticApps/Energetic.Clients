@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Energetic.Clients.ViewModels;
+﻿using Energetic.Clients.ViewModels;
 using Energetic.Enumerables;
 using System;
 using System.Collections.Generic;
@@ -24,7 +23,7 @@ namespace Microsoft.Extensions.DependencyInjection
             return services.Scan(scan => scan
             .FromAssemblies(assemblies)
             .AddClasses(classes => classes.AssignableTo<IViewModel>())
-            .AsSelf()
+            .AsMatchingInterface()
             .WithTransientLifetime());
         }
     }
