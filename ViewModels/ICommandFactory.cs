@@ -18,7 +18,7 @@ namespace Energetic.Clients.ViewModels
          * But also 
          * CommandFactory.CreateCommand(InitializeAsync)
          * Both compile with no errors or warnings, but they're not the same (at least, I don't think they are).
-         * If there are important differenced and a "right" and "wrong" way to do it, let's refactor this so that nobody can
+         * If there are important differences and a "right" and "wrong" way to do it, let's refactor this so that nobody can
          * do it the wrong way. */
 
         IAsyncCommand CreateCommand(Func<Task> execute, Func<bool>? canExecute = null, Action<Exception>? errorHandler = null);
